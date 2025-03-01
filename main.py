@@ -89,9 +89,7 @@ class Processor:
         worker_name = threading.current_thread().name
         time.sleep(0.5)
         result = item * 2
-        self.logger.debug(
-            f"Worker: {worker_name} - Input: {item} - Result: {result}"
-        )
+        self.logger.debug(f"Worker: {worker_name} - Input: {item} - Result: {result}")
         return result
 
     def run_process(self) -> list[int]:
